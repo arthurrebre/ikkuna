@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ikuna - Free crypto website template by Arthur Rebré">
+        <meta name="author" content="Arthur Rebré (Middle Agency)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:site-name" content="" />
+        <meta property="og:description" content="..." />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('icons/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('icons/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('icons/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('icons/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('icons/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('icons/apple-icon-120x120.png.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('icons/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('icons/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('icons/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icons/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Crypto Website Template by Arthur Rebré</title>
+
+        <!-- Jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google font : Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+        <!-- Main style -->
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/state.css">
+
+        <!-- Smooth show effect -->
+        <script>
+            $(document).ready(function(){
+                const ratio = .1
+                const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: ratio
+                }
+                const handleIntersect = function (entries, observer){
+                entries.forEach(function (entry){
+                    if (entry.intersectionRatio > ratio){
+                    entry.target.classList.add('reveal-visible')
+                    observer.unobserve(entry.target)
+                    }
+                })
+                }
+                const observer = new IntersectionObserver(handleIntersect, options)
+                document.querySelectorAll('[class*="reveal-"]').forEach(function (r) {
+                    observer.observe(r)
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#home" class="logo"><span class="color">I</span>kkuna</a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <span id="btnMenu" class="btn btn-secondary">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Menu -->
+        <div class="main-menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Main Banner -->
+            <section id="home" class="main-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8 reveal-2">
+                            <h1>Crypto website template</h1>
+                            <p>Ikkuna is a free website HTML template for cryptocurrency and blockchain business.</br> 100% responsive and easy to customize.</p>
+                            <a class="btn btn-md btn-primary" href="https://github.com/arthurrebre/ikkuna">Download me <i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <img class="img-fluid" src="img/blockchain.png" alt="/">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" class="page-section about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">About us</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p><strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugit pariatur nobis deserunt exercitationem! Enim, provident voluptas sunt soluta harum quis eius, est odit accusantium ex porro impedit laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. In esse illum laborum inventore! Ipsum exercitationem aut fuga, nam corporis, eveniet suscipit molestiae ipsa quas voluptates eius eum harum id odio?</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fugit pariatur nobis deserunt exercitationem! Enim, provident voluptas sunt soluta harum quis eius, est odit accusantium ex porro impedit laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. In esse illum laborum inventore! Ipsum exercitationem aut fuga, nam corporis, eveniet suscipit molestiae ipsa quas voluptates eius eum harum id odio?</p>   
+                        </article>
+                        <article class="col-12 reveal-2 mt-4">
+                            <h3>Join us:</h3>
+                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-discord"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-telegram-plane"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-reddit-alien"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-github"></i></a>   
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features section -->
+            <section id="features" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">Our features</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsam hic dolorem laboriosam asperiores sunt eaque fuga dolorum qui perferendis quas ipsa voluptatum nihil commodi, laborum facere cumque sit veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eaque facilis magnam harum iste, fugit vitae ab eligendi modi sit officiis a. Ducimus vitae nobis deserunt eaque maiores debitis incidunt.</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsam hic dolorem laboriosam asperiores sunt eaque fuga dolorum qui perferendis quas ipsa voluptatum nihil commodi, laborum facere cumque sit veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eaque facilis magnam harum iste, fugit vitae ab eligendi modi sit officiis a. Ducimus vitae nobis deserunt eaque maiores debitis incidunt.</p>   
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team section -->
+            <section id="team" class="page-section team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Meet our team and contributors</p>
+                            <h2 class="page-title">Team</h2>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <article class="card">
+                                <img src="https://via.placeholder.com/150x150" alt="John Doe picture">
+                                <h3>John Doe</h3>
+                                <h4>CEO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id quasi impedit. Totam, laborum accusamus.</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>   
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <article class="card">
+                                <img src="https://via.placeholder.com/150x150" alt="John Doe picture">
+                                <h3>Satoshi Nakamoto</h3>
+                                <h4>CTO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id quasi impedit. Totam, laborum accusamus.</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>        
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-4">
+                            <article class="card">
+                                <img src="https://via.placeholder.com/150x150" alt="John Doe picture">
+                                <h3>Darth Vader</h3>
+                                <h4>CMO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id quasi impedit. Totam, laborum accusamus.</p>
+                                <p>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>     
+                                </p>             
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap section -->
+            <section id="roadmap" class="page-section roadmap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Our future developement</p>
+                            <h2 class="page-title">Roadmap</h2>
+                        </div>
+                        <div class="col-12 col-md-6 reveal-2">
+                            <article class="card">
+                                <h3>2020 - Q3</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                    <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-check"></i> Lorem ipsum dolor sit.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum, dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                </ul>                        
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6 reveal-2">
+                            <article class="card">
+                                <h3>2020 - Q4</h3>
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit amet.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum, dolor sit amet consectetur.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Lorem ipsum dolor sit amet consectetur.</li>
+                                </ul>                       
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners section -->
+            <section id="partners" class="page-section partners">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">They support us</p>
+                            <h2 class="page-title">Our partners</h2>
+                        </div>
+                        <article class="col-12 reveal-2">
+                            <div class="partners-slider">
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 4">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="https://via.placeholder.com/300x100" alt="Partner 4">
+                                </div>
+                              </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ressources section -->
+            <section id="ressources" class="page-section ressources">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Earn, buy and spend Token</p>
+                            <h2 class="page-title">Ressources</h2>
+                        </div>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-wallet"></i> Wallet</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-exchange-alt"></i> Exchanges</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-6 col-md-4 reveal-2">
+                            <h3><i class="fas fa-store"></i> Stores</h3>
+                            <ul>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                                <li><a href="#">Example link</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Banner -->
+            <div class="footer-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <h2 class="page-title">Website template for blockchain business</h2>
+                            <p>Ikkuna is a free website HTML template for cryptocurrency and blockchain business. 100% responsive and easy to customize.</p>
+                            <a target="_blank" href="https://github.com/arthurrebre/ikkuna" class="btn btn-md btn-download">Download me <i class="fas fa-cloud-download-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <article class="col-12 col-md-3">
+                            <h3>Navigation</h3>
+                            <ul>
+                                <li><a href="#about">About us</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#roadmap">Roadmap</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#partners">Partners</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Ressources</h3>
+                            <ul>
+                                <li><a href="#">Wallet</a></li>
+                                <li><a href="#">Exchanges</a></li>
+                                <li><a href="#">Stores</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Exchanges</h3>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </article>
+                        <article class="col-12 col-md-3">
+                            <h3>Community</h3>
+                            <ul>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Contribute</a></li>
+                            </ul>
+                        </article>
+                        <div class="col-12">
+                            <hr>   
+                        </div>
+                        <div class="col-12 col-md-6 social">
+                            <p>
+                                <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-discord"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-telegram-plane"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-reddit-alien"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-github"></i></a>                         
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 copyright">
+                            <p>&copy; 2020 Ikkuna by <a href="">Arthur Rebré</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- PopperJS & Bootstrap CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Slick -->
+        <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+        <script>
+            $('.partners-slider').slick({
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 3
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 1
+                    }
+                    }
+                ]
+            });
+        </script>
+        <!-- -->
+        <script src="js/app.js"></script>
+    </body>
+</html>

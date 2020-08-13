@@ -1,0 +1,78 @@
+a:hover {
+    text-decoration: none!important;
+}
+
+/* CARD */
+.card:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+/* BTN */
+.btn-primary:hover{
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+.btn-secondary:hover{
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+.btn-download:hover{
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+/* HEADER */
+.main-header.scrolled{
+    background-color: rgba(17, 20, 27, 0.9);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-bottom: 1px solid #00a8ff;
+}
+.main-header .logo:hover {
+    opacity: .8;
+}
+
+/* MENU */
+.main-menu.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
+    color: #fff!important;
+}
+
+/* FOOTER */
+footer a:hover {
+    color: #fff!important;
+}
+
+/* MAIN BANNER */
+.main-banner img:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+/* ABOUT */
+.about i:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+/* RESSOURCES */
+.ressources a:hover {
+    color: #fff;
+}
