@@ -147,7 +147,7 @@ opacity: 0;
 /* MAIN BANNER */
 .main-banner h1{
     color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 3.6rem;
     margin-bottom: 40px;
 }
@@ -259,15 +259,21 @@ opacity: 0;
     margin-bottom: 10px;
 }
 .team article h4 {
-    color: #00a8ff;
+    color: #f19066;
     font-size: 1rem;
     margin-bottom: 20px;
 }
-.team article i {
+.team article p {
     font-size: .8rem;
+}
+.team article i {
+    font-size: 1rem;
     color: #fff;
     margin: 0 .5rem;
 }
+
+/* PARTNERS */
+
 
 /* RESSOURCES */
 .ressources article ul li {

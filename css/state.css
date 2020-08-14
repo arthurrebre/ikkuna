@@ -56,6 +56,12 @@ a:hover {
 footer a:hover {
     color: #fff!important;
 }
+.main-footer .social a i:hover{
+    color: #00a8ff;
+}
+footer .copyright a:hover {
+    color: #00a8ff;
+}
 
 /* MAIN BANNER */
 .main-banner img:hover {
@@ -70,6 +76,12 @@ footer a:hover {
 .about i:hover {
     background-color: transparent;
     border: 1px solid #fff;
+}
+
+/* PARTNERS */
+.partners-slider .partners-slider-item:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 /* RESSOURCES */

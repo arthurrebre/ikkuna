@@ -1,14 +1,15 @@
 html, body{
     background-color: #11141b;
     color: #fff;
+    overflow-x: hidden;
 }
 i{
     vertical-align: middle;
 }
-.container {
+/* .container {
     max-width: 1000px;
     margin: auto;
-}
+} */
 
 p strong {
     color: #fff;
@@ -25,8 +26,8 @@ p strong {
 
 .page-title {
     color: #fff;
-    font-size: 2.4rem;
-    font-weight: 900;
+    font-size: 2.8rem;
+    font-weight: 700;
     max-width: 500px;
     margin-bottom: 80px;
 }
