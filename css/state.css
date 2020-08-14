@@ -73,18 +73,18 @@ footer .copyright a:hover {
 }
 
 /* ABOUT */
-.about i:hover {
+#about i:hover {
     background-color: transparent;
     border: 1px solid #fff;
 }
 
 /* PARTNERS */
-.partners-slider .partners-slider-item:hover {
+#partners-slider .partners-slider-item:hover {
     cursor: pointer;
     opacity: 0.7;
 }
 
 /* RESSOURCES */
-.ressources a:hover {
+#ressources a:hover {
     color: #fff;
 }
