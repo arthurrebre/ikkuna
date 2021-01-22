@@ -1,5 +1,5 @@
-# ikkuna
+# BlackDiamondSC
 
-Ikkuna is a free website HTML template for cryptocurrency and blockchain business.
+This is the official website template of blackDiamondSC Inc. The website aims to spread knowledge about our company and its features.
 
-Demo: https://ikkuna.netlify.app/
+Official Website - blackdiamondsc.tech
